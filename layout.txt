@@ -1,0 +1,32 @@
+(1) Stream is on.
+AnalyzeFace
+	Get faceID from Rekognition. (Add to collection?)
+	(2) check if known. (meaning, in “faces” Collection)
+		If known:
+			Check if the faceID is in the OTP DynamoDB table. If so, do nothing.
+			(3) Make OTP, save with TTL.
+				Also save the faceID, and a timestamp.
+			(4) Text the user with the link to WP2 and the OTP.
+		If faceID is None (unknown user):
+			Add image to PendingVisitors (Rekognition collection).
+			Save photo to PendingVisitors (S3 bucket).
+			Get faceID from Rekognition.
+			(5) Text us/Owner link to WP1.
+				Need a JS ?= argument that includes the faceID.
+				Page should display that person's image.
+			AuthorizeNewUser: triggered when the owner submits name and number on WP1.
+				(6) From WP1, save the name and number, and faceID.
+					Add to Rekognition, so can get faceID.
+					    get faceID from URL argument
+    					get photo from S3 using faceID.
+				(7) Make OTP, save with TTL
+					Also save the faceID, and a timestamp.
+				(8) Text the user with the link to WP2 and the OTP.
+				Add image to ValidatedUsers (Rekognition collection).
+				Delete from PendingVisitors.
+	AllowAccess: triggered when known user puts in OTP on WP2.
+		(9) User puts OTP in WP2.
+		(10) Validate OTP.
+		Save new photo to DB.
+		(11) Get visitor name and photo. Send them to their personalized Welcome page.
+			coms6698.com/welcomeNewUser?faceID=1-029834812389

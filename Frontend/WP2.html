@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+		<script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+	    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+	    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+	    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+	    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+	    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+	    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+	    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+	    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+	    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+	    <script type="text/javascript" src="apigClient.js"></script>
+	    <script src="WP2.js"></script>
+
+		<style>
+		body{
+			background-color: #C5C2FC;
+		}
+		.center {
+		  margin: auto;
+		  width: 40%;
+		  height:170px;
+		  border: 1px solid black;
+		  background-color: #FAFAFA;
+		  padding: 10px;
+		  border-radius: 10px;
+		  box-shadow: 5px 10px 8px #888888;
+		}
+		.big{
+			height: 30px;
+		}
+		.pushed{
+			padding-top: 80px;
+			font-color: black;
+			font-size: 30px;
+		}
+		.push1{
+			padding-left: 10px;
+		}
+		.vertical-center {
+		  margin: 0;
+		  position: absolute;
+		  top: 50%;
+		  -ms-transform: translateY(-50%);
+		  transform: translateY(-50%);
+		}
+		.pushh{
+			padding-left: 10px;
+		}
+		.left{
+			padding-left: 90px;
+		}
+		.ye{
+			padding-left: 100px;
+		}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="container"> 
+			<div id="lol">
+				<div class="text-center">
+					<div class="pushed">Smart Door Authentication</div>
+				</div>
+				<div class="big row"></div>
+				<div class="center">
+					<input class="form-control" type="text" id="otp" placeholder="OTP"><br>
+					<div class="text-center">
+						<div id="error"></div><br>
+					</div>
+					<div class="text-center">
+						<button type="button" id="otp-submit" class="btn btn-info">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

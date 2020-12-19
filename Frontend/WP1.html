@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+	    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+	    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+	    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+	    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+	    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+	    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+	    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+	    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+	    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+	    <script type="text/javascript" src="apigClient.js"></script>
+	    <script src="WP1.js"></script>
+		<style>
+		body{
+			background-color: #89D9EA;
+		}
+		.center {
+		  margin: auto;
+		  width: 40%;
+		  height:430px;
+		  border: 1px solid black;
+		  background-color: #FAFAFA;
+		  padding: 10px;
+		  border-radius: 10px;
+		  box-shadow: 5px 10px 8px #888888;
+		}
+		.big{
+			height: 30px;
+		}
+		.pushed{
+			padding-top: 80px;
+			font-color: black;
+			font-size: 30px;
+		}
+		.small{
+			height: 10px;
+		}
+		.push1{
+			padding-left: 10px;
+		}
+		img.resize {
+		  max-width:100%;
+		  max-height:100%;
+		}
+
+		</style>
+	</head>
+
+	<body>
+		<div class="container"> 
+			<div class="text-center">
+				<div class="pushed">Visitor Information</div>
+			</div>
+			<div class="big row"></div>
+			<div class="center"> 
+				<div class="small"></div>
+				<input class="form-control" type="text" id="visitor-name" placeholder="Name" >
+				<div class="small"></div>
+				<input class="form-control" type="text" id="phone-number" placeholder="Phone Number"><br>
+				<div class="text-center">
+					<button type="button" id="visitor-info-submit" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
