@@ -1,4 +1,4 @@
-# COMS 6998 Cloud Computing Homework 2: Smart Door
+# Facial Recognition Smart Door
 ### Alex Atschinow, Pelin Cetin, Myles Ingram, and Joseph Hostyk
 
 Website that accesses a livestream to give access to approved users.
